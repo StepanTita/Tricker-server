@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign</title>
+    <style>
+        div{
+        position : absolute;
+        right : 10px;
+        top : 5px
+        }
+
+    </style>
+</head>
+<body>
+<H2>Upload to firebase</H2>
+<form action="#" method="post">
+    {% csrf_token %}
+    Document Uplaod:
+    <input type="file" name="files[]" id="files">
+    <input type="hidden" name="url" id="url">
+    <button type="button" onclick="uploadimage()">Upload</button>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</html>

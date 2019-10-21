@@ -1,0 +1,1 @@
+web: gunicorn tricker_server.wsgi --log-file -
